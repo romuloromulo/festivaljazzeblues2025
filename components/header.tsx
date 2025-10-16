@@ -43,12 +43,6 @@ export function Header() {
             >
               Programação
             </button>
-            <button
-              onClick={() => scrollToSection("patrocinadores")}
-              className="text-sm uppercase tracking-wider hover:text-accent transition-colors cursor-pointer"
-            >
-              Patrocinadores
-            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -82,15 +76,6 @@ export function Header() {
             >
               Programação
             </button>
-            <button
-              onClick={() => scrollToSection("patrocinadores")}
-              className="text-left text-sm uppercase tracking-wider hover:text-accent transition-colors cursor-pointer"
-            >
-              Patrocinadores
-            </button>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
-              Ingressos
-            </Button>
           </nav>
         )}
       </div>

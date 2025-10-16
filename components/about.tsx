@@ -48,7 +48,7 @@ export function About() {
               </div>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl font-bold text-secondary">15+</div>
+              <div className="text-5xl font-bold text-secondary">10+</div>
               <div className="text-sm uppercase tracking-wider text-muted-foreground">
                 Artistas
               </div>
