@@ -42,7 +42,7 @@ export function Hero() {
           </div>
           <div className="rounded-md bg-amber-50/10 px-4 py-2 gap-y-2 flex flex-col ">
             <p className="text-2xl md:text-3xl font-bold text-primary text-balance">
-              21/10 • Teatro João do vale, São Luís
+              21/10 • Teatro Sesc Napoleão Ewerton, São Luís
             </p>
             <p className="text-2xl md:text-3xl font-bold text-primary text-balance -translate-y-2">
               24/10 • Concha Acústica, São Luís
