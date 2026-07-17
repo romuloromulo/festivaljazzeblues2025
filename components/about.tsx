@@ -15,7 +15,7 @@ export function About() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-balance leading-tight">
-            Lençóos Jazz e Blues Festival homenageia Hermeto Pascoal e celebra
+            Lençóis Jazz e Blues Festival homenageia Hermeto Pascoal e celebra
             50 anos de carreira de Beto Guedes
           </h2>
           <div className="space-y-4 md:space-y-6 text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
