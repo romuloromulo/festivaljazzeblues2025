@@ -27,7 +27,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="">
-            <Image src={Logo} width={40} height={40} alt="Logo" />
+            <Image src={Logo} width={60} height={60} alt="Logo" />
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
