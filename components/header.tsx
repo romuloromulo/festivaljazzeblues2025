@@ -6,15 +6,20 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../public/images/logo.png";
 
+const MENU_ANIMATION_DURATION = 300;
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
+    setIsMenuOpen(false);
+
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, MENU_ANIMATION_DURATION);
   };
 
   return (
@@ -62,11 +67,14 @@ export function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.nav
-              className="md:hidden flex flex-col gap-4 pb-4"
+              className="md:hidden flex flex-col gap-4 pb-4 pt-4"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{
+                duration: MENU_ANIMATION_DURATION / 1000,
+                ease: "easeInOut",
+              }}
               style={{ overflow: "hidden" }}
             >
               <motion.button

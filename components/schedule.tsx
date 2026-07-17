@@ -71,24 +71,26 @@ const scheduleData = [
 
 export function Schedule() {
   return (
-    <section id="programacao" className="py-24 md:py-32">
+    <section id="programacao" className="py-16 md:py-32 scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-balance">
             Programação
           </h2>
-          <p className="text-xl text-muted-foreground mb-16 text-pretty">
+          <p className="text-base sm:text-xl text-muted-foreground mb-10 md:mb-16 text-pretty">
             Confira os horários e não perca nenhum momento do 16º Lençóis Jazz e
             Blues Festival 2025
           </p>
 
-          <div className="space-y-12">
+          <div className="space-y-10 md:space-y-12">
             {scheduleData.map((day, dayIndex) => (
-              <div key={dayIndex} className="space-y-6">
-                <div className="border-l-4 border-accent pl-6">
-                  <h3 className="text-3xl font-bold">{day.day}</h3>
-                  <p className="text-muted-foreground">{day.date}</p>
-                  <p className="text-sm text-muted-foreground italic">
+              <div key={dayIndex} className="space-y-4 md:space-y-6">
+                <div className="border-l-4 border-accent pl-4 md:pl-6">
+                  <h3 className="text-2xl sm:text-3xl font-bold">{day.day}</h3>
+                  <p className="text-muted-foreground text-sm sm:text-base">
+                    {day.date}
+                  </p>
+                  <p className="text-xs sm:text-sm text-muted-foreground italic">
                     {day.location}
                   </p>
                 </div>
@@ -97,13 +99,17 @@ export function Schedule() {
                   {day.events.map((event, eventIndex) => (
                     <div
                       key={eventIndex}
-                      className="grid grid-cols-[100px_1fr_1fr] md:grid-cols-[120px_1fr_200px] gap-4 p-4 bg-card hover:bg-secondary transition-colors rounded-lg border border-border"
+                      className="flex flex-col gap-2 md:grid md:grid-cols-[120px_1fr_200px] md:gap-4 md:items-center p-3 md:p-4 bg-card hover:bg-secondary transition-colors rounded-lg border border-border"
                     >
-                      <div className="text-sm md:text-base font-mono text-accent font-bold">
-                        {event.time}
+                      <div className="flex items-center gap-3 md:contents">
+                        <div className="text-sm md:text-base font-mono text-accent font-bold shrink-0">
+                          {event.time}
+                        </div>
+                        <div className="font-semibold text-sm sm:text-base">
+                          {event.title}
+                        </div>
                       </div>
-                      <div className="font-semibold">{event.title}</div>
-                      <div className="text-sm text-muted-foreground uppercase tracking-wider hidden md:block">
+                      <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">
                         {event.stage}
                       </div>
                     </div>
